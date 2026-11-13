@@ -1,0 +1,8 @@
+*.zip
+*.bin
+*.img
+*.apfs
+mach.*
+__pycache__/
+.DS_Store
+fw-*/

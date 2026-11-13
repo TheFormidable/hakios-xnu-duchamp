@@ -1,0 +1,16 @@
+hakios-xnu-duchamp -- the kernel side of HakiOS for the POCO X6 Pro 5G (duchamp, MediaTek Dimensity 8300 Ultra / MT6897)
+
+Licenses
+  xnu/files/bsd/dev/redwood_mtk*.c, xnu/files/bsd/sys/redwood_mtkufs.h
+                   Apple Public Source License 2.0 (LICENSE.APSL): written for, and built into, Apple's XNU
+                   (xnu-8796.121.2, the HakiOS tree github.com/oosexgang/hakios-xnu-kernel, branch mtk).
+  files that say SPDX-License-Identifier: MIT (hakios_Panthor.cpp, hakios_panthor.h, hakios-panthor-smoke.c)
+                   MIT (LICENSE).
+  everything else  MIT (LICENSE).
+
+Third-party code: none is copied into this repository. Register addresses and interfaces were read from public sources,
+named where used (Linux's panthor driver and its uAPI, MediaTek's gpufreq/GPUEB drivers in
+github.com/mt6897-devs/android_kernel_device_modules_6.1, the HakiOS tree's own drivers).
+
+Not in this repository, by design (LEGAL.md): any file of iOS, any vendor firmware (the GPU's mali_csffw.bin comes from the
+user's own phone), any kernel binary, any image or device tree of the phone.
