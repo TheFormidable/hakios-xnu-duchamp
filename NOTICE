@@ -14,3 +14,19 @@ github.com/mt6897-devs/android_kernel_device_modules_6.1, the HakiOS tree's own 
 
 Not in this repository, by design (LEGAL.md): any file of iOS, any vendor firmware (the GPU's mali_csffw.bin comes from the
 user's own phone), any kernel binary, any image or device tree of the phone.
+
+Imported from iPocOS (github.com/SuperProgramer64/iPocOS, commit 7f0308f, by SuperProgramer64), unchanged, under the
+license each file states:
+  xnu/ipocos/**  files saying SPDX-License-Identifier: MIT -- MIT; files with the APSL header or
+                 SPDX-License-Identifier: APSL-2.0 (boot/) -- Apple Public Source License 2.0 (LICENSE.APSL).
+                 Copyright of these files stays with their authors (iPocOS / "The HakiOS authors").
+  None of them is hooked into the kernel build (xnu/duchamp-overlay.py copies xnu/files/ only).
+
+Not imported from iPocOS, on purpose:
+  - files without any license notice (most of the patch: Wi-Fi hakios.mtk_conn.c, the GPU driver hakios.mali_csf.c and
+    hakios.mali.cpp, the display MiniIOMobileFramebuffer.cpp / MiniIOSurface.cpp, touch, backlight, keys, audio, SCP,
+    the loader, the dual-boot selector and installer): no license means no permission to copy. Ask the author.
+  - GPL-2.0-only files (hakios.mtu3*, hakios.mtk_battery*, hakios.mtk_i2c_gpio.h): not compatible with APSL/MIT here.
+  - the Panthor user client (hakios.panthor*.{cpp,h}, userland panthor-drm, bench/mac_bench.c): this repository keeps
+    its own (xnu/files/iokit/Kernel/hakios_Panthor.cpp).
+  - anything of Apple's or of the phone's vendor (LEGAL.md).
